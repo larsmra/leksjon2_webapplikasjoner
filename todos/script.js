@@ -187,8 +187,7 @@ function formatDateString(date) {
     return `${day}.${month}.${year}`;
 }
 
-// A function that adds some example data to the arrays.
-// This function is used to test the application.
+// This function is used to fill the application with some example data.
 function createExampleTodos() {
     // Adds example todos to the completed todos.
     completedTodos.push({"id": todoId++, "title": "Todotitle 1", "desc": "Lorem ipsum ...", "author": "Ola", "completedDate": new Date(2018, 3, 3)});
