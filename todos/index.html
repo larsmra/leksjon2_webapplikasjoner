@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="mainHeader">
+        <h1 >HIOF</h1>
+        <p >User user</p>
+    </header>
+    <main>
+        <section>
+            <button id="openModalBtn">
+                <svg width="1em" height="1em">
+                    <line x1="0" y1="0.5em" x2="1em" y2="0.5em" />
+                    <line x1="0.5em" y1="0" x2="0.5em" y2="1em" />
+                </svg>
+                <span>Todo</span>
+            </button>
+        </section>
+        <section id="todoContainer">
+            <!-- Todo-cards generated with JavaScript -->
+        </section>
+        <section class="completedTodosContainer">
+            <h2>Completed todos</h2>
+            <div class="filterContainer">
+                <input type="checkbox" name="filter" id="filter" />
+                <label for="filter">Filter by date</label>
+            </div>
+            <table>
+                <tbody id="completedTodosTable">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Description</th>
+                        <th>Completed date</th>
+                    </tr>
+                    <!-- Table rows generated with JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div id="overlay">
+        <section class="createTodoModal">
+            <header class="modalHeader">
+                <h2>New todo</h2>
+                <svg id="cancelBtn" width="1.5em" height="1.5em">
+                    <line x1="0" y1="0" x2="1.5em" y2="1.5em" />
+                    <line x1="0" y1="1.5em" x2="1.5em" y2="0" />
+                </svg>
+            </header>
+            <form id="todoForm">
+                <label for="title">Title</label>
+                <input id="todoTitle" name="title" placeholder="Title" required />
+                <label for="desc">Description <span>(<span id="descLength"></span> characters left)</span></label>
+                <input id="todoDesc" name="desc" placeholder="Description" maxlength="30" required />
+                <label for="author">Author</label>
+                <input id="todoAuthor" name="author" placeholder="Author" required />
+                <button type="submit" class="createBtn">Create</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
